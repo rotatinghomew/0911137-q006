@@ -23,7 +23,7 @@
       {
         "employee": "e001",
         "job": "j2",
-        "group": "B",
+        "group": "A",
         "region": "上海",
         "tenure": 2,
         "fte": 1.0
@@ -39,7 +39,7 @@
       {
         "employee": "e003",
         "job": "j4",
-        "group": "B",
+        "group": "A",
         "region": "成都",
         "tenure": 4,
         "fte": 1.0
@@ -63,7 +63,7 @@
       {
         "employee": "e006",
         "job": "j1",
-        "group": "A",
+        "group": "B",
         "region": "成都",
         "tenure": 7,
         "fte": 1.0
@@ -79,7 +79,7 @@
       {
         "employee": "e008",
         "job": "j3",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 9,
         "fte": 1.0
@@ -95,7 +95,7 @@
       {
         "employee": "e010",
         "job": "j5",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 11,
         "fte": 0.5
@@ -119,7 +119,7 @@
       {
         "employee": "e013",
         "job": "j2",
-        "group": "B",
+        "group": "A",
         "region": "上海",
         "tenure": 2,
         "fte": 1.0
@@ -135,7 +135,7 @@
       {
         "employee": "e015",
         "job": "j4",
-        "group": "B",
+        "group": "A",
         "region": "成都",
         "tenure": 4,
         "fte": 1.0
@@ -159,7 +159,7 @@
       {
         "employee": "e018",
         "job": "j1",
-        "group": "A",
+        "group": "B",
         "region": "成都",
         "tenure": 7,
         "fte": 1.0
@@ -175,7 +175,7 @@
       {
         "employee": "e020",
         "job": "j3",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 9,
         "fte": 0.5
@@ -191,7 +191,7 @@
       {
         "employee": "e022",
         "job": "j5",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 11,
         "fte": 1.0
@@ -215,7 +215,7 @@
       {
         "employee": "e025",
         "job": "j2",
-        "group": "B",
+        "group": "A",
         "region": "上海",
         "tenure": 2,
         "fte": 1.0
@@ -231,7 +231,7 @@
       {
         "employee": "e027",
         "job": "j4",
-        "group": "B",
+        "group": "A",
         "region": "成都",
         "tenure": 4,
         "fte": 1.0
@@ -255,7 +255,7 @@
       {
         "employee": "e030",
         "job": "j1",
-        "group": "A",
+        "group": "B",
         "region": "成都",
         "tenure": 7,
         "fte": 0.5
@@ -271,7 +271,7 @@
       {
         "employee": "e032",
         "job": "j3",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 9,
         "fte": 1.0
@@ -287,7 +287,7 @@
       {
         "employee": "e034",
         "job": "j5",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 11,
         "fte": 1.0
@@ -311,7 +311,7 @@
       {
         "employee": "e037",
         "job": "j2",
-        "group": "B",
+        "group": "A",
         "region": "上海",
         "tenure": 2,
         "fte": 1.0
@@ -327,7 +327,7 @@
       {
         "employee": "e039",
         "job": "j4",
-        "group": "B",
+        "group": "A",
         "region": "成都",
         "tenure": 4,
         "fte": 1.0
@@ -351,7 +351,7 @@
       {
         "employee": "e042",
         "job": "j1",
-        "group": "A",
+        "group": "B",
         "region": "成都",
         "tenure": 7,
         "fte": 1.0
@@ -367,7 +367,7 @@
       {
         "employee": "e044",
         "job": "j3",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 9,
         "fte": 1.0
@@ -383,7 +383,7 @@
       {
         "employee": "e046",
         "job": "j5",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 11,
         "fte": 1.0
@@ -407,7 +407,7 @@
       {
         "employee": "e049",
         "job": "j2",
-        "group": "B",
+        "group": "A",
         "region": "上海",
         "tenure": 2,
         "fte": 1.0
@@ -423,7 +423,7 @@
       {
         "employee": "e051",
         "job": "j4",
-        "group": "B",
+        "group": "A",
         "region": "成都",
         "tenure": 4,
         "fte": 1.0
@@ -447,7 +447,7 @@
       {
         "employee": "e054",
         "job": "j1",
-        "group": "A",
+        "group": "B",
         "region": "成都",
         "tenure": 7,
         "fte": 1.0
@@ -463,7 +463,7 @@
       {
         "employee": "e056",
         "job": "j3",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 9,
         "fte": 1.0
@@ -479,7 +479,7 @@
       {
         "employee": "e058",
         "job": "j5",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 11,
         "fte": 1.0
@@ -503,7 +503,7 @@
       {
         "employee": "e061",
         "job": "j2",
-        "group": "B",
+        "group": "A",
         "region": "上海",
         "tenure": 2,
         "fte": 1.0
@@ -519,7 +519,7 @@
       {
         "employee": "e063",
         "job": "j4",
-        "group": "B",
+        "group": "A",
         "region": "成都",
         "tenure": 4,
         "fte": 1.0
@@ -543,7 +543,7 @@
       {
         "employee": "e066",
         "job": "j1",
-        "group": "A",
+        "group": "B",
         "region": "成都",
         "tenure": 7,
         "fte": 1.0
@@ -559,7 +559,7 @@
       {
         "employee": "e068",
         "job": "j3",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 9,
         "fte": 1.0
@@ -575,7 +575,7 @@
       {
         "employee": "e070",
         "job": "j5",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 11,
         "fte": 0.5
@@ -599,7 +599,7 @@
       {
         "employee": "e073",
         "job": "j2",
-        "group": "B",
+        "group": "A",
         "region": "上海",
         "tenure": 2,
         "fte": 1.0
@@ -615,7 +615,7 @@
       {
         "employee": "e075",
         "job": "j4",
-        "group": "B",
+        "group": "A",
         "region": "成都",
         "tenure": 4,
         "fte": 1.0
@@ -639,7 +639,7 @@
       {
         "employee": "e078",
         "job": "j1",
-        "group": "A",
+        "group": "B",
         "region": "成都",
         "tenure": 7,
         "fte": 1.0
@@ -655,7 +655,7 @@
       {
         "employee": "e080",
         "job": "j3",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 9,
         "fte": 0.5
@@ -671,7 +671,7 @@
       {
         "employee": "e082",
         "job": "j5",
-        "group": "A",
+        "group": "B",
         "region": "上海",
         "tenure": 11,
         "fte": 1.0
@@ -695,7 +695,7 @@
       {
         "employee": "e085",
         "job": "j2",
-        "group": "B",
+        "group": "A",
         "region": "上海",
         "tenure": 2,
         "fte": 1.0
@@ -711,7 +711,7 @@
       {
         "employee": "e087",
         "job": "j4",
-        "group": "B",
+        "group": "A",
         "region": "成都",
         "tenure": 4,
         "fte": 1.0
