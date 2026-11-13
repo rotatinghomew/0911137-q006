@@ -1,0 +1,2041 @@
+{
+  "meta": {
+    "name": "薪酬结构分析台",
+    "description": "薪酬按年、人民币计，fte 为工时比例。",
+    "groups": [
+      "上海",
+      "成都"
+    ],
+    "default_cutoff": 2026,
+    "min_cutoff": 2025,
+    "max_cutoff": 2026
+  },
+  "tables": {
+    "employees": [
+      {
+        "employee": "e000",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 1,
+        "fte": 0.5
+      },
+      {
+        "employee": "e001",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 2,
+        "fte": 1.0
+      },
+      {
+        "employee": "e002",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 3,
+        "fte": 1.0
+      },
+      {
+        "employee": "e003",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 4,
+        "fte": 1.0
+      },
+      {
+        "employee": "e004",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 5,
+        "fte": 1.0
+      },
+      {
+        "employee": "e005",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 6,
+        "fte": 1.0
+      },
+      {
+        "employee": "e006",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 7,
+        "fte": 1.0
+      },
+      {
+        "employee": "e007",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 8,
+        "fte": 1.0
+      },
+      {
+        "employee": "e008",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 9,
+        "fte": 1.0
+      },
+      {
+        "employee": "e009",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 10,
+        "fte": 1.0
+      },
+      {
+        "employee": "e010",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 11,
+        "fte": 0.5
+      },
+      {
+        "employee": "e011",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 12,
+        "fte": 1.0
+      },
+      {
+        "employee": "e012",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 1,
+        "fte": 1.0
+      },
+      {
+        "employee": "e013",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 2,
+        "fte": 1.0
+      },
+      {
+        "employee": "e014",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 3,
+        "fte": 1.0
+      },
+      {
+        "employee": "e015",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 4,
+        "fte": 1.0
+      },
+      {
+        "employee": "e016",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 5,
+        "fte": 1.0
+      },
+      {
+        "employee": "e017",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 6,
+        "fte": 1.0
+      },
+      {
+        "employee": "e018",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 7,
+        "fte": 1.0
+      },
+      {
+        "employee": "e019",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 8,
+        "fte": 1.0
+      },
+      {
+        "employee": "e020",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 9,
+        "fte": 0.5
+      },
+      {
+        "employee": "e021",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 10,
+        "fte": 1.0
+      },
+      {
+        "employee": "e022",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 11,
+        "fte": 1.0
+      },
+      {
+        "employee": "e023",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 12,
+        "fte": 1.0
+      },
+      {
+        "employee": "e024",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 1,
+        "fte": 1.0
+      },
+      {
+        "employee": "e025",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 2,
+        "fte": 1.0
+      },
+      {
+        "employee": "e026",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 3,
+        "fte": 1.0
+      },
+      {
+        "employee": "e027",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 4,
+        "fte": 1.0
+      },
+      {
+        "employee": "e028",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 5,
+        "fte": 1.0
+      },
+      {
+        "employee": "e029",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 6,
+        "fte": 1.0
+      },
+      {
+        "employee": "e030",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 7,
+        "fte": 0.5
+      },
+      {
+        "employee": "e031",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 8,
+        "fte": 1.0
+      },
+      {
+        "employee": "e032",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 9,
+        "fte": 1.0
+      },
+      {
+        "employee": "e033",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 10,
+        "fte": 1.0
+      },
+      {
+        "employee": "e034",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 11,
+        "fte": 1.0
+      },
+      {
+        "employee": "e035",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 12,
+        "fte": 1.0
+      },
+      {
+        "employee": "e036",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 1,
+        "fte": 1.0
+      },
+      {
+        "employee": "e037",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 2,
+        "fte": 1.0
+      },
+      {
+        "employee": "e038",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 3,
+        "fte": 1.0
+      },
+      {
+        "employee": "e039",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 4,
+        "fte": 1.0
+      },
+      {
+        "employee": "e040",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 5,
+        "fte": 0.5
+      },
+      {
+        "employee": "e041",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 6,
+        "fte": 1.0
+      },
+      {
+        "employee": "e042",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 7,
+        "fte": 1.0
+      },
+      {
+        "employee": "e043",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 8,
+        "fte": 1.0
+      },
+      {
+        "employee": "e044",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 9,
+        "fte": 1.0
+      },
+      {
+        "employee": "e045",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 10,
+        "fte": 1.0
+      },
+      {
+        "employee": "e046",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 11,
+        "fte": 1.0
+      },
+      {
+        "employee": "e047",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 12,
+        "fte": 1.0
+      },
+      {
+        "employee": "e048",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 1,
+        "fte": 1.0
+      },
+      {
+        "employee": "e049",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 2,
+        "fte": 1.0
+      },
+      {
+        "employee": "e050",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 3,
+        "fte": 0.5
+      },
+      {
+        "employee": "e051",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 4,
+        "fte": 1.0
+      },
+      {
+        "employee": "e052",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 5,
+        "fte": 1.0
+      },
+      {
+        "employee": "e053",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 6,
+        "fte": 1.0
+      },
+      {
+        "employee": "e054",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 7,
+        "fte": 1.0
+      },
+      {
+        "employee": "e055",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 8,
+        "fte": 1.0
+      },
+      {
+        "employee": "e056",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 9,
+        "fte": 1.0
+      },
+      {
+        "employee": "e057",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 10,
+        "fte": 1.0
+      },
+      {
+        "employee": "e058",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 11,
+        "fte": 1.0
+      },
+      {
+        "employee": "e059",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 12,
+        "fte": 1.0
+      },
+      {
+        "employee": "e060",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 1,
+        "fte": 0.5
+      },
+      {
+        "employee": "e061",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 2,
+        "fte": 1.0
+      },
+      {
+        "employee": "e062",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 3,
+        "fte": 1.0
+      },
+      {
+        "employee": "e063",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 4,
+        "fte": 1.0
+      },
+      {
+        "employee": "e064",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 5,
+        "fte": 1.0
+      },
+      {
+        "employee": "e065",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 6,
+        "fte": 1.0
+      },
+      {
+        "employee": "e066",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 7,
+        "fte": 1.0
+      },
+      {
+        "employee": "e067",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 8,
+        "fte": 1.0
+      },
+      {
+        "employee": "e068",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 9,
+        "fte": 1.0
+      },
+      {
+        "employee": "e069",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 10,
+        "fte": 1.0
+      },
+      {
+        "employee": "e070",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 11,
+        "fte": 0.5
+      },
+      {
+        "employee": "e071",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 12,
+        "fte": 1.0
+      },
+      {
+        "employee": "e072",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 1,
+        "fte": 1.0
+      },
+      {
+        "employee": "e073",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 2,
+        "fte": 1.0
+      },
+      {
+        "employee": "e074",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 3,
+        "fte": 1.0
+      },
+      {
+        "employee": "e075",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 4,
+        "fte": 1.0
+      },
+      {
+        "employee": "e076",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 5,
+        "fte": 1.0
+      },
+      {
+        "employee": "e077",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 6,
+        "fte": 1.0
+      },
+      {
+        "employee": "e078",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 7,
+        "fte": 1.0
+      },
+      {
+        "employee": "e079",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 8,
+        "fte": 1.0
+      },
+      {
+        "employee": "e080",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 9,
+        "fte": 0.5
+      },
+      {
+        "employee": "e081",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 10,
+        "fte": 1.0
+      },
+      {
+        "employee": "e082",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 11,
+        "fte": 1.0
+      },
+      {
+        "employee": "e083",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 12,
+        "fte": 1.0
+      },
+      {
+        "employee": "e084",
+        "job": "j1",
+        "group": "A",
+        "region": "成都",
+        "tenure": 1,
+        "fte": 1.0
+      },
+      {
+        "employee": "e085",
+        "job": "j2",
+        "group": "B",
+        "region": "上海",
+        "tenure": 2,
+        "fte": 1.0
+      },
+      {
+        "employee": "e086",
+        "job": "j3",
+        "group": "A",
+        "region": "上海",
+        "tenure": 3,
+        "fte": 1.0
+      },
+      {
+        "employee": "e087",
+        "job": "j4",
+        "group": "B",
+        "region": "成都",
+        "tenure": 4,
+        "fte": 1.0
+      },
+      {
+        "employee": "e088",
+        "job": "j5",
+        "group": "A",
+        "region": "上海",
+        "tenure": 5,
+        "fte": 1.0
+      },
+      {
+        "employee": "e089",
+        "job": "j6",
+        "group": "C",
+        "region": "上海",
+        "tenure": 6,
+        "fte": 1.0
+      }
+    ],
+    "compensation": [
+      {
+        "employee": "e000",
+        "year": 2025,
+        "fixed": 25297.51,
+        "bonus": null,
+        "equity_units": 0
+      },
+      {
+        "employee": "e000",
+        "year": 2026,
+        "fixed": 22145.94,
+        "bonus": null,
+        "equity_units": 0
+      },
+      {
+        "employee": "e001",
+        "year": 2025,
+        "fixed": 94888.89,
+        "bonus": 5020,
+        "equity_units": 100
+      },
+      {
+        "employee": "e001",
+        "year": 2026,
+        "fixed": 94751.8,
+        "bonus": 5020,
+        "equity_units": 100
+      },
+      {
+        "employee": "e002",
+        "year": 2025,
+        "fixed": 132275.18,
+        "bonus": 5040,
+        "equity_units": 200
+      },
+      {
+        "employee": "e002",
+        "year": 2026,
+        "fixed": 139302.89,
+        "bonus": 5040,
+        "equity_units": 200
+      },
+      {
+        "employee": "e003",
+        "year": 2025,
+        "fixed": 179765.8,
+        "bonus": 5060,
+        "equity_units": 300
+      },
+      {
+        "employee": "e003",
+        "year": 2026,
+        "fixed": 178043.07,
+        "bonus": 5060,
+        "equity_units": 300
+      },
+      {
+        "employee": "e004",
+        "year": 2025,
+        "fixed": 211142.12,
+        "bonus": 5080,
+        "equity_units": 400
+      },
+      {
+        "employee": "e004",
+        "year": 2026,
+        "fixed": 223903.01,
+        "bonus": 5080,
+        "equity_units": 400
+      },
+      {
+        "employee": "e005",
+        "year": 2025,
+        "fixed": 264047.77,
+        "bonus": 5100,
+        "equity_units": 500
+      },
+      {
+        "employee": "e005",
+        "year": 2026,
+        "fixed": 261551.92,
+        "bonus": 5100,
+        "equity_units": 500
+      },
+      {
+        "employee": "e006",
+        "year": 2025,
+        "fixed": 59655.36,
+        "bonus": 5120,
+        "equity_units": 600
+      },
+      {
+        "employee": "e006",
+        "year": 2026,
+        "fixed": 45047.05,
+        "bonus": 5120,
+        "equity_units": 600
+      },
+      {
+        "employee": "e007",
+        "year": 2025,
+        "fixed": 94630.68,
+        "bonus": 5140,
+        "equity_units": 0
+      },
+      {
+        "employee": "e007",
+        "year": 2026,
+        "fixed": 92979.68,
+        "bonus": 5140,
+        "equity_units": 0
+      },
+      {
+        "employee": "e008",
+        "year": 2025,
+        "fixed": 138573.17,
+        "bonus": 5160,
+        "equity_units": 100
+      },
+      {
+        "employee": "e008",
+        "year": 2026,
+        "fixed": 139473.46,
+        "bonus": 5160,
+        "equity_units": 100
+      },
+      {
+        "employee": "e009",
+        "year": 2025,
+        "fixed": 170358.87,
+        "bonus": 0,
+        "equity_units": 200
+      },
+      {
+        "employee": "e009",
+        "year": 2026,
+        "fixed": 172940.42,
+        "bonus": 0,
+        "equity_units": 200
+      },
+      {
+        "employee": "e010",
+        "year": 2025,
+        "fixed": 111304.04,
+        "bonus": 5200,
+        "equity_units": 300
+      },
+      {
+        "employee": "e010",
+        "year": 2026,
+        "fixed": 111348.74,
+        "bonus": 5200,
+        "equity_units": 300
+      },
+      {
+        "employee": "e011",
+        "year": 2025,
+        "fixed": 261539.45,
+        "bonus": 5220,
+        "equity_units": 400
+      },
+      {
+        "employee": "e011",
+        "year": 2026,
+        "fixed": 264729.63,
+        "bonus": 5220,
+        "equity_units": 400
+      },
+      {
+        "employee": "e012",
+        "year": 2025,
+        "fixed": 59222.22,
+        "bonus": 5240,
+        "equity_units": 500
+      },
+      {
+        "employee": "e012",
+        "year": 2026,
+        "fixed": 46498.94,
+        "bonus": 5240,
+        "equity_units": 500
+      },
+      {
+        "employee": "e013",
+        "year": 2025,
+        "fixed": 97672.55,
+        "bonus": null,
+        "equity_units": 600
+      },
+      {
+        "employee": "e013",
+        "year": 2026,
+        "fixed": 91208.58,
+        "bonus": null,
+        "equity_units": 600
+      },
+      {
+        "employee": "e014",
+        "year": 2025,
+        "fixed": 139637.0,
+        "bonus": 5280,
+        "equity_units": 0
+      },
+      {
+        "employee": "e014",
+        "year": 2026,
+        "fixed": 129636.74,
+        "bonus": 5280,
+        "equity_units": 0
+      },
+      {
+        "employee": "e015",
+        "year": 2025,
+        "fixed": 179342.22,
+        "bonus": 5300,
+        "equity_units": 100
+      },
+      {
+        "employee": "e015",
+        "year": 2026,
+        "fixed": 176028.23,
+        "bonus": 5300,
+        "equity_units": 100
+      },
+      {
+        "employee": "e016",
+        "year": 2025,
+        "fixed": 219414.82,
+        "bonus": 5320,
+        "equity_units": 200
+      },
+      {
+        "employee": "e016",
+        "year": 2026,
+        "fixed": 226879.65,
+        "bonus": 5320,
+        "equity_units": 200
+      },
+      {
+        "employee": "e017",
+        "year": 2025,
+        "fixed": 254510.61,
+        "bonus": 5340,
+        "equity_units": 300
+      },
+      {
+        "employee": "e017",
+        "year": 2026,
+        "fixed": 268586.53,
+        "bonus": 5340,
+        "equity_units": 300
+      },
+      {
+        "employee": "e018",
+        "year": 2025,
+        "fixed": 47275.39,
+        "bonus": 0,
+        "equity_units": 400
+      },
+      {
+        "employee": "e018",
+        "year": 2026,
+        "fixed": 46157.53,
+        "bonus": 0,
+        "equity_units": 400
+      },
+      {
+        "employee": "e019",
+        "year": 2025,
+        "fixed": 97917.61,
+        "bonus": 5380,
+        "equity_units": 500
+      },
+      {
+        "employee": "e019",
+        "year": 2026,
+        "fixed": 85533.43,
+        "bonus": 5380,
+        "equity_units": 500
+      },
+      {
+        "employee": "e020",
+        "year": 2025,
+        "fixed": 71865.76,
+        "bonus": 5400,
+        "equity_units": 600
+      },
+      {
+        "employee": "e020",
+        "year": 2026,
+        "fixed": 65150.37,
+        "bonus": 5400,
+        "equity_units": 600
+      },
+      {
+        "employee": "e021",
+        "year": 2025,
+        "fixed": 177410.62,
+        "bonus": 5420,
+        "equity_units": 0
+      },
+      {
+        "employee": "e021",
+        "year": 2026,
+        "fixed": 180453.65,
+        "bonus": 5420,
+        "equity_units": 0
+      },
+      {
+        "employee": "e022",
+        "year": 2025,
+        "fixed": 222821.65,
+        "bonus": 5440,
+        "equity_units": 100
+      },
+      {
+        "employee": "e022",
+        "year": 2026,
+        "fixed": 219504.61,
+        "bonus": 5440,
+        "equity_units": 100
+      },
+      {
+        "employee": "e023",
+        "year": 2025,
+        "fixed": 262520.84,
+        "bonus": 5460,
+        "equity_units": 200
+      },
+      {
+        "employee": "e023",
+        "year": 2026,
+        "fixed": 267603.02,
+        "bonus": 5460,
+        "equity_units": 200
+      },
+      {
+        "employee": "e024",
+        "year": 2025,
+        "fixed": 44406.11,
+        "bonus": 5480,
+        "equity_units": 300
+      },
+      {
+        "employee": "e024",
+        "year": 2026,
+        "fixed": 46588.12,
+        "bonus": 5480,
+        "equity_units": 300
+      },
+      {
+        "employee": "e025",
+        "year": 2025,
+        "fixed": 91669.72,
+        "bonus": 5500,
+        "equity_units": 400
+      },
+      {
+        "employee": "e025",
+        "year": 2026,
+        "fixed": 94208.02,
+        "bonus": 5500,
+        "equity_units": 400
+      },
+      {
+        "employee": "e026",
+        "year": 2025,
+        "fixed": 136351.85,
+        "bonus": null,
+        "equity_units": 500
+      },
+      {
+        "employee": "e026",
+        "year": 2026,
+        "fixed": 140018.78,
+        "bonus": null,
+        "equity_units": 500
+      },
+      {
+        "employee": "e027",
+        "year": 2025,
+        "fixed": 182989.71,
+        "bonus": 0,
+        "equity_units": 600
+      },
+      {
+        "employee": "e027",
+        "year": 2026,
+        "fixed": 175890.86,
+        "bonus": 0,
+        "equity_units": 600
+      },
+      {
+        "employee": "e028",
+        "year": 2025,
+        "fixed": 224532.57,
+        "bonus": 5560,
+        "equity_units": 0
+      },
+      {
+        "employee": "e028",
+        "year": 2026,
+        "fixed": 210872.33,
+        "bonus": 5560,
+        "equity_units": 0
+      },
+      {
+        "employee": "e029",
+        "year": 2025,
+        "fixed": 255179.15,
+        "bonus": 5580,
+        "equity_units": 100
+      },
+      {
+        "employee": "e029",
+        "year": 2026,
+        "fixed": 268180.01,
+        "bonus": 5580,
+        "equity_units": 100
+      },
+      {
+        "employee": "e030",
+        "year": 2025,
+        "fixed": 24126.16,
+        "bonus": 5600,
+        "equity_units": 200
+      },
+      {
+        "employee": "e030",
+        "year": 2026,
+        "fixed": 25831.57,
+        "bonus": 5600,
+        "equity_units": 200
+      },
+      {
+        "employee": "e031",
+        "year": 2025,
+        "fixed": 84364.09,
+        "bonus": 5620,
+        "equity_units": 300
+      },
+      {
+        "employee": "e031",
+        "year": 2026,
+        "fixed": 90585.43,
+        "bonus": 5620,
+        "equity_units": 300
+      },
+      {
+        "employee": "e032",
+        "year": 2025,
+        "fixed": 129007.75,
+        "bonus": 5640,
+        "equity_units": 400
+      },
+      {
+        "employee": "e032",
+        "year": 2026,
+        "fixed": 135518.67,
+        "bonus": 5640,
+        "equity_units": 400
+      },
+      {
+        "employee": "e033",
+        "year": 2025,
+        "fixed": 181703.73,
+        "bonus": 5660,
+        "equity_units": 500
+      },
+      {
+        "employee": "e033",
+        "year": 2026,
+        "fixed": 169056.72,
+        "bonus": 5660,
+        "equity_units": 500
+      },
+      {
+        "employee": "e034",
+        "year": 2025,
+        "fixed": 221317.18,
+        "bonus": 5680,
+        "equity_units": 600
+      },
+      {
+        "employee": "e034",
+        "year": 2026,
+        "fixed": 214724.54,
+        "bonus": 5680,
+        "equity_units": 600
+      },
+      {
+        "employee": "e035",
+        "year": 2025,
+        "fixed": 256975.83,
+        "bonus": 5700,
+        "equity_units": 0
+      },
+      {
+        "employee": "e035",
+        "year": 2026,
+        "fixed": 255252.61,
+        "bonus": 5700,
+        "equity_units": 0
+      },
+      {
+        "employee": "e036",
+        "year": 2025,
+        "fixed": 56847.39,
+        "bonus": 0,
+        "equity_units": 100
+      },
+      {
+        "employee": "e036",
+        "year": 2026,
+        "fixed": 51244.01,
+        "bonus": 0,
+        "equity_units": 100
+      },
+      {
+        "employee": "e037",
+        "year": 2025,
+        "fixed": 84011.35,
+        "bonus": 5740,
+        "equity_units": 200
+      },
+      {
+        "employee": "e037",
+        "year": 2026,
+        "fixed": 97058.27,
+        "bonus": 5740,
+        "equity_units": 200
+      },
+      {
+        "employee": "e038",
+        "year": 2025,
+        "fixed": 133184.57,
+        "bonus": 5760,
+        "equity_units": 300
+      },
+      {
+        "employee": "e038",
+        "year": 2026,
+        "fixed": 133065.56,
+        "bonus": 5760,
+        "equity_units": 300
+      },
+      {
+        "employee": "e039",
+        "year": 2025,
+        "fixed": 185907.18,
+        "bonus": null,
+        "equity_units": 400
+      },
+      {
+        "employee": "e039",
+        "year": 2026,
+        "fixed": 177173.03,
+        "bonus": null,
+        "equity_units": 400
+      },
+      {
+        "employee": "e040",
+        "year": 2025,
+        "fixed": 113149.84,
+        "bonus": 5800,
+        "equity_units": 500
+      },
+      {
+        "employee": "e040",
+        "year": 2026,
+        "fixed": 108800.93,
+        "bonus": 5800,
+        "equity_units": 500
+      },
+      {
+        "employee": "e041",
+        "year": 2025,
+        "fixed": 258354.14,
+        "bonus": 5820,
+        "equity_units": 600
+      },
+      {
+        "employee": "e041",
+        "year": 2026,
+        "fixed": 268410.4,
+        "bonus": 5820,
+        "equity_units": 600
+      },
+      {
+        "employee": "e042",
+        "year": 2025,
+        "fixed": 51173.45,
+        "bonus": 5840,
+        "equity_units": 0
+      },
+      {
+        "employee": "e042",
+        "year": 2026,
+        "fixed": 59590.46,
+        "bonus": 5840,
+        "equity_units": 0
+      },
+      {
+        "employee": "e043",
+        "year": 2025,
+        "fixed": 98406.01,
+        "bonus": 5860,
+        "equity_units": 100
+      },
+      {
+        "employee": "e043",
+        "year": 2026,
+        "fixed": 99595.83,
+        "bonus": 5860,
+        "equity_units": 100
+      },
+      {
+        "employee": "e044",
+        "year": 2025,
+        "fixed": 126248.89,
+        "bonus": 5880,
+        "equity_units": 200
+      },
+      {
+        "employee": "e044",
+        "year": 2026,
+        "fixed": 136409.27,
+        "bonus": 5880,
+        "equity_units": 200
+      },
+      {
+        "employee": "e045",
+        "year": 2025,
+        "fixed": 177249.4,
+        "bonus": 0,
+        "equity_units": 300
+      },
+      {
+        "employee": "e045",
+        "year": 2026,
+        "fixed": 170989.09,
+        "bonus": 0,
+        "equity_units": 300
+      },
+      {
+        "employee": "e046",
+        "year": 2025,
+        "fixed": 227884.12,
+        "bonus": 5920,
+        "equity_units": 400
+      },
+      {
+        "employee": "e046",
+        "year": 2026,
+        "fixed": 224855.11,
+        "bonus": 5920,
+        "equity_units": 400
+      },
+      {
+        "employee": "e047",
+        "year": 2025,
+        "fixed": 268420.53,
+        "bonus": 5940,
+        "equity_units": 500
+      },
+      {
+        "employee": "e047",
+        "year": 2026,
+        "fixed": 260195.46,
+        "bonus": 5940,
+        "equity_units": 500
+      },
+      {
+        "employee": "e048",
+        "year": 2025,
+        "fixed": 43462.1,
+        "bonus": 5960,
+        "equity_units": 600
+      },
+      {
+        "employee": "e048",
+        "year": 2026,
+        "fixed": 47656.35,
+        "bonus": 5960,
+        "equity_units": 600
+      },
+      {
+        "employee": "e049",
+        "year": 2025,
+        "fixed": 84775.71,
+        "bonus": 5980,
+        "equity_units": 0
+      },
+      {
+        "employee": "e049",
+        "year": 2026,
+        "fixed": 88459.77,
+        "bonus": 5980,
+        "equity_units": 0
+      },
+      {
+        "employee": "e050",
+        "year": 2025,
+        "fixed": 63924.48,
+        "bonus": 6000,
+        "equity_units": 100
+      },
+      {
+        "employee": "e050",
+        "year": 2026,
+        "fixed": 65687.25,
+        "bonus": 6000,
+        "equity_units": 100
+      },
+      {
+        "employee": "e051",
+        "year": 2025,
+        "fixed": 173279.6,
+        "bonus": 6020,
+        "equity_units": 200
+      },
+      {
+        "employee": "e051",
+        "year": 2026,
+        "fixed": 178304.1,
+        "bonus": 6020,
+        "equity_units": 200
+      },
+      {
+        "employee": "e052",
+        "year": 2025,
+        "fixed": 211203.97,
+        "bonus": null,
+        "equity_units": 300
+      },
+      {
+        "employee": "e052",
+        "year": 2026,
+        "fixed": 210644.39,
+        "bonus": null,
+        "equity_units": 300
+      },
+      {
+        "employee": "e053",
+        "year": 2025,
+        "fixed": 265409.16,
+        "bonus": 6060,
+        "equity_units": 400
+      },
+      {
+        "employee": "e053",
+        "year": 2026,
+        "fixed": 259303.17,
+        "bonus": 6060,
+        "equity_units": 400
+      },
+      {
+        "employee": "e054",
+        "year": 2025,
+        "fixed": 47957.29,
+        "bonus": 0,
+        "equity_units": 500
+      },
+      {
+        "employee": "e054",
+        "year": 2026,
+        "fixed": 59984.56,
+        "bonus": 0,
+        "equity_units": 500
+      },
+      {
+        "employee": "e055",
+        "year": 2025,
+        "fixed": 96402.21,
+        "bonus": 6100,
+        "equity_units": 600
+      },
+      {
+        "employee": "e055",
+        "year": 2026,
+        "fixed": 98411.25,
+        "bonus": 6100,
+        "equity_units": 600
+      },
+      {
+        "employee": "e056",
+        "year": 2025,
+        "fixed": 126114.17,
+        "bonus": 6120,
+        "equity_units": 0
+      },
+      {
+        "employee": "e056",
+        "year": 2026,
+        "fixed": 134653.41,
+        "bonus": 6120,
+        "equity_units": 0
+      },
+      {
+        "employee": "e057",
+        "year": 2025,
+        "fixed": 171311.05,
+        "bonus": 6140,
+        "equity_units": 100
+      },
+      {
+        "employee": "e057",
+        "year": 2026,
+        "fixed": 175106.08,
+        "bonus": 6140,
+        "equity_units": 100
+      },
+      {
+        "employee": "e058",
+        "year": 2025,
+        "fixed": 220491.75,
+        "bonus": 6160,
+        "equity_units": 200
+      },
+      {
+        "employee": "e058",
+        "year": 2026,
+        "fixed": 222747.1,
+        "bonus": 6160,
+        "equity_units": 200
+      },
+      {
+        "employee": "e059",
+        "year": 2025,
+        "fixed": 267604.34,
+        "bonus": 6180,
+        "equity_units": 300
+      },
+      {
+        "employee": "e059",
+        "year": 2026,
+        "fixed": 257893.0,
+        "bonus": 6180,
+        "equity_units": 300
+      },
+      {
+        "employee": "e060",
+        "year": 2025,
+        "fixed": 25808.38,
+        "bonus": 6200,
+        "equity_units": 400
+      },
+      {
+        "employee": "e060",
+        "year": 2026,
+        "fixed": 27616.01,
+        "bonus": 6200,
+        "equity_units": 400
+      },
+      {
+        "employee": "e061",
+        "year": 2025,
+        "fixed": 89237.95,
+        "bonus": 6220,
+        "equity_units": 500
+      },
+      {
+        "employee": "e061",
+        "year": 2026,
+        "fixed": 89935.33,
+        "bonus": 6220,
+        "equity_units": 500
+      },
+      {
+        "employee": "e062",
+        "year": 2025,
+        "fixed": 130842.08,
+        "bonus": 6240,
+        "equity_units": 600
+      },
+      {
+        "employee": "e062",
+        "year": 2026,
+        "fixed": 127423.0,
+        "bonus": 6240,
+        "equity_units": 600
+      },
+      {
+        "employee": "e063",
+        "year": 2025,
+        "fixed": 174373.37,
+        "bonus": 0,
+        "equity_units": 0
+      },
+      {
+        "employee": "e063",
+        "year": 2026,
+        "fixed": 185168.95,
+        "bonus": 0,
+        "equity_units": 0
+      },
+      {
+        "employee": "e064",
+        "year": 2025,
+        "fixed": 210416.74,
+        "bonus": 6280,
+        "equity_units": 100
+      },
+      {
+        "employee": "e064",
+        "year": 2026,
+        "fixed": 211080.64,
+        "bonus": 6280,
+        "equity_units": 100
+      },
+      {
+        "employee": "e065",
+        "year": 2025,
+        "fixed": 254023.4,
+        "bonus": null,
+        "equity_units": 200
+      },
+      {
+        "employee": "e065",
+        "year": 2026,
+        "fixed": 267596.91,
+        "bonus": null,
+        "equity_units": 200
+      },
+      {
+        "employee": "e066",
+        "year": 2025,
+        "fixed": 59913.2,
+        "bonus": 6320,
+        "equity_units": 300
+      },
+      {
+        "employee": "e066",
+        "year": 2026,
+        "fixed": 50841.16,
+        "bonus": 6320,
+        "equity_units": 300
+      },
+      {
+        "employee": "e067",
+        "year": 2025,
+        "fixed": 94516.35,
+        "bonus": 6340,
+        "equity_units": 400
+      },
+      {
+        "employee": "e067",
+        "year": 2026,
+        "fixed": 97376.08,
+        "bonus": 6340,
+        "equity_units": 400
+      },
+      {
+        "employee": "e068",
+        "year": 2025,
+        "fixed": 138603.47,
+        "bonus": 6360,
+        "equity_units": 500
+      },
+      {
+        "employee": "e068",
+        "year": 2026,
+        "fixed": 139426.2,
+        "bonus": 6360,
+        "equity_units": 500
+      },
+      {
+        "employee": "e069",
+        "year": 2025,
+        "fixed": 180073.51,
+        "bonus": 6380,
+        "equity_units": 600
+      },
+      {
+        "employee": "e069",
+        "year": 2026,
+        "fixed": 173551.23,
+        "bonus": 6380,
+        "equity_units": 600
+      },
+      {
+        "employee": "e070",
+        "year": 2025,
+        "fixed": 113061.59,
+        "bonus": 6400,
+        "equity_units": 0
+      },
+      {
+        "employee": "e070",
+        "year": 2026,
+        "fixed": 106678.16,
+        "bonus": 6400,
+        "equity_units": 0
+      },
+      {
+        "employee": "e071",
+        "year": 2025,
+        "fixed": 252772.39,
+        "bonus": 6420,
+        "equity_units": 100
+      },
+      {
+        "employee": "e071",
+        "year": 2026,
+        "fixed": 269023.11,
+        "bonus": 6420,
+        "equity_units": 100
+      },
+      {
+        "employee": "e072",
+        "year": 2025,
+        "fixed": 42256.19,
+        "bonus": 0,
+        "equity_units": 200
+      },
+      {
+        "employee": "e072",
+        "year": 2026,
+        "fixed": 47581.5,
+        "bonus": 0,
+        "equity_units": 200
+      },
+      {
+        "employee": "e073",
+        "year": 2025,
+        "fixed": 96531.01,
+        "bonus": 6460,
+        "equity_units": 300
+      },
+      {
+        "employee": "e073",
+        "year": 2026,
+        "fixed": 95213.99,
+        "bonus": 6460,
+        "equity_units": 300
+      },
+      {
+        "employee": "e074",
+        "year": 2025,
+        "fixed": 132612.94,
+        "bonus": 6480,
+        "equity_units": 400
+      },
+      {
+        "employee": "e074",
+        "year": 2026,
+        "fixed": 132813.02,
+        "bonus": 6480,
+        "equity_units": 400
+      },
+      {
+        "employee": "e075",
+        "year": 2025,
+        "fixed": 168264.14,
+        "bonus": 6500,
+        "equity_units": 500
+      },
+      {
+        "employee": "e075",
+        "year": 2026,
+        "fixed": 180269.73,
+        "bonus": 6500,
+        "equity_units": 500
+      },
+      {
+        "employee": "e076",
+        "year": 2025,
+        "fixed": 223609.14,
+        "bonus": 6520,
+        "equity_units": 600
+      },
+      {
+        "employee": "e076",
+        "year": 2026,
+        "fixed": 224987.95,
+        "bonus": 6520,
+        "equity_units": 600
+      },
+      {
+        "employee": "e077",
+        "year": 2025,
+        "fixed": 263808.77,
+        "bonus": 6540,
+        "equity_units": 0
+      },
+      {
+        "employee": "e077",
+        "year": 2026,
+        "fixed": 268162.37,
+        "bonus": 6540,
+        "equity_units": 0
+      },
+      {
+        "employee": "e078",
+        "year": 2025,
+        "fixed": 43393.06,
+        "bonus": null,
+        "equity_units": 100
+      },
+      {
+        "employee": "e078",
+        "year": 2026,
+        "fixed": 44767.93,
+        "bonus": null,
+        "equity_units": 100
+      },
+      {
+        "employee": "e079",
+        "year": 2025,
+        "fixed": 100725.02,
+        "bonus": 6580,
+        "equity_units": 200
+      },
+      {
+        "employee": "e079",
+        "year": 2026,
+        "fixed": 93362.64,
+        "bonus": 6580,
+        "equity_units": 200
+      },
+      {
+        "employee": "e080",
+        "year": 2025,
+        "fixed": 71905.06,
+        "bonus": 6600,
+        "equity_units": 300
+      },
+      {
+        "employee": "e080",
+        "year": 2026,
+        "fixed": 69100.07,
+        "bonus": 6600,
+        "equity_units": 300
+      },
+      {
+        "employee": "e081",
+        "year": 2025,
+        "fixed": 168091.58,
+        "bonus": 0,
+        "equity_units": 400
+      },
+      {
+        "employee": "e081",
+        "year": 2026,
+        "fixed": 174947.87,
+        "bonus": 0,
+        "equity_units": 400
+      },
+      {
+        "employee": "e082",
+        "year": 2025,
+        "fixed": 219055.44,
+        "bonus": 6640,
+        "equity_units": 500
+      },
+      {
+        "employee": "e082",
+        "year": 2026,
+        "fixed": 214206.93,
+        "bonus": 6640,
+        "equity_units": 500
+      },
+      {
+        "employee": "e083",
+        "year": 2025,
+        "fixed": 253442.03,
+        "bonus": 6660,
+        "equity_units": 600
+      },
+      {
+        "employee": "e083",
+        "year": 2026,
+        "fixed": 261857.02,
+        "bonus": 6660,
+        "equity_units": 600
+      },
+      {
+        "employee": "e084",
+        "year": 2025,
+        "fixed": 49466.59,
+        "bonus": 6680,
+        "equity_units": 0
+      },
+      {
+        "employee": "e084",
+        "year": 2026,
+        "fixed": 45182.1,
+        "bonus": 6680,
+        "equity_units": 0
+      },
+      {
+        "employee": "e085",
+        "year": 2025,
+        "fixed": 85971.55,
+        "bonus": 6700,
+        "equity_units": 100
+      },
+      {
+        "employee": "e085",
+        "year": 2026,
+        "fixed": 94202.84,
+        "bonus": 6700,
+        "equity_units": 100
+      },
+      {
+        "employee": "e086",
+        "year": 2025,
+        "fixed": 136667.59,
+        "bonus": 6720,
+        "equity_units": 200
+      },
+      {
+        "employee": "e086",
+        "year": 2026,
+        "fixed": 130976.08,
+        "bonus": 6720,
+        "equity_units": 200
+      },
+      {
+        "employee": "e087",
+        "year": 2025,
+        "fixed": 180798.11,
+        "bonus": 6740,
+        "equity_units": 300
+      },
+      {
+        "employee": "e087",
+        "year": 2026,
+        "fixed": 170432.95,
+        "bonus": 6740,
+        "equity_units": 300
+      },
+      {
+        "employee": "e088",
+        "year": 2025,
+        "fixed": 218780.73,
+        "bonus": 6760,
+        "equity_units": 400
+      },
+      {
+        "employee": "e088",
+        "year": 2026,
+        "fixed": 224143.94,
+        "bonus": 6760,
+        "equity_units": 400
+      },
+      {
+        "employee": "e089",
+        "year": 2025,
+        "fixed": 260759.77,
+        "bonus": 6780,
+        "equity_units": 500
+      },
+      {
+        "employee": "e089",
+        "year": 2026,
+        "fixed": 264869.8,
+        "bonus": 6780,
+        "equity_units": 500
+      }
+    ],
+    "bands": [
+      {
+        "job": "j1",
+        "lower": 40000,
+        "upper": 80000
+      },
+      {
+        "job": "j2",
+        "lower": 80000,
+        "upper": 160000
+      },
+      {
+        "job": "j3",
+        "lower": 120000,
+        "upper": 240000
+      },
+      {
+        "job": "j4",
+        "lower": 160000,
+        "upper": 320000
+      },
+      {
+        "job": "j5",
+        "lower": 200000,
+        "upper": 400000
+      },
+      {
+        "job": "j6",
+        "lower": 240000,
+        "upper": 480000
+      }
+    ],
+    "valuations": [
+      {
+        "year": 2025,
+        "price": 12
+      },
+      {
+        "year": 2026,
+        "price": 15
+      }
+    ]
+  }
+}
