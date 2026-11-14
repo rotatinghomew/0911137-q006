@@ -14,4 +14,8 @@ dt { font-weight: 600; } dd { margin: 0; font-size: 22px; }
 th,td { text-align: left; padding: 8px; border-bottom: 1px solid #d6e3e9; white-space: nowrap; }
 th { position: sticky; top: 0; background: #e4edf2; } #digest { overflow-wrap: anywhere; font-size: 12px; color: #456; }
 small { margin-left: 14px; color: #567; } li { margin: 7px 0; } #status { font-weight: 600; }
+.muted { color: #567; font-size: 13px; }
+.pair { border-top: 2px solid #d6e3e9; margin-top: 18px; padding-top: 8px; }
+.pair h3 { margin: 6px 0; } .pair h4 { margin: 14px 0 4px; font-size: 15px; }
+td { vertical-align: top; }
 @media (max-width: 600px) { dl { grid-template-columns: 1fr 1fr; } }

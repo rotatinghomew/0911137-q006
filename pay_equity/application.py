@@ -8,11 +8,26 @@ import threading
 from urllib.parse import parse_qs, urlsplit
 from urllib.request import Request, urlopen
 
-from .domain import run
+from .disparity import DIMENSIONS, METRICS
+from .domain import resolve, run
+from .export import build_export, csv_rows
+from .simulation import simulate
 from .storage import AnalysisStore, read_dataset
 
 
 ROOT = Path(__file__).resolve().parents[1]
+ANALYSIS_FIELDS = {'cutoff', 'group', 'dimension', 'baseline', 'metric', 'tenure_width'}
+
+
+def _csv_cell(value):
+    text = '' if value is None else str(value)
+    if any(character in text for character in ',"\n'):
+        return '"' + text.replace('"', '""') + '"'
+    return text
+
+
+ROOT = Path(__file__).resolve().parents[1]
+ANALYSIS_FIELDS = {'cutoff', 'group', 'dimension', 'baseline', 'metric', 'tenure_width'}
 
 
 class Application:
@@ -25,9 +40,9 @@ class Application:
         data, digest = read_dataset(self.dataset)
         return {**data['meta'], 'digest': digest, 'tables': {name: len(rows) for name, rows in data['tables'].items()}}
 
-    def analyze(self, supplied):
-        if not isinstance(supplied, dict) or set(supplied) - {'cutoff', 'group'}:
-            raise ValueError('只接受 cutoff 和 group 筛选项')
+    def _validated(self, supplied, allowed):
+        if not isinstance(supplied, dict) or set(supplied) - allowed:
+            raise ValueError('筛选项无效：' + '、'.join(sorted(set(supplied) - allowed)))
         data, digest = read_dataset(self.dataset)
         cutoff = supplied.get('cutoff', data['meta']['default_cutoff'])
         try:
@@ -42,8 +57,65 @@ class Application:
         if not data['meta']['min_cutoff'] <= cutoff <= data['meta']['max_cutoff']:
             raise ValueError('分析时点超出资料范围')
         options = {'cutoff': cutoff, 'group': group}
+        for key, default, choices in [
+            ('dimension', 'group', tuple(DIMENSIONS)),
+            ('metric', 'fixed_fulltime', tuple(METRICS)),
+        ]:
+            value = supplied.get(key, default)
+            if not isinstance(value, str) or value not in choices:
+                raise ValueError('未知' + ('比较维度' if key == 'dimension' else '薪酬口径'))
+            options[key] = value
+        baseline = supplied.get('baseline', '')
+        if not isinstance(baseline, str):
+            raise ValueError('参照群体须为文本')
+        options['baseline'] = baseline
+        width = supplied.get('tenure_width', 10)
+        if isinstance(width, bool):
+            raise ValueError('任职时间带宽度须为整数')
+        try:
+            width = int(width)
+        except (TypeError, ValueError):
+            raise ValueError('任职时间带宽度须为整数') from None
+        if not 1 <= width <= 50:
+            raise ValueError('任职时间带宽度须为一到五十的整数')
+        options['tenure_width'] = width
+        return data, digest, options
+
+    def analyze(self, supplied):
+        data, digest, options = self._validated(supplied, ANALYSIS_FIELDS)
+        resolved, _, _ = resolve(data['tables'], options)
+        options = {**options, 'baseline': resolved['baseline']}
         result = run(data['tables'], options)
         return {'digest': digest, 'options': options, 'result': result}
+
+    def simulate(self, supplied):
+        if not isinstance(supplied, dict):
+            raise ValueError('试算请求须为对象')
+        allowed = ANALYSIS_FIELDS | {'scenario'}
+        data, _, options = self._validated({key: value for key, value in supplied.items() if key != 'scenario'}, ANALYSIS_FIELDS)
+        scenario = supplied.get('scenario')
+        if scenario is None:
+            scenario = {}
+        resolved, rows, _ = resolve(data['tables'], options)
+        options = {**options, 'baseline': resolved['baseline']}
+        result = simulate(rows, scenario)
+        return {'options': options, 'scenario': result['scenario'], 'result': result}
+
+    def export(self, supplied):
+        """Build an aggregate review export from a saved version plus a scenario."""
+        if not isinstance(supplied, dict) or set(supplied) - {'id', 'simulation'}:
+            raise ValueError('导出请求字段无效')
+        identifier = supplied.get('id')
+        if not isinstance(identifier, str) or not identifier:
+            raise ValueError('导出须指定已保存的分析版本')
+        analysis = self.store.get(identifier)
+        scenario = supplied.get('simulation')
+        simulation = None
+        if scenario is not None:
+            data, _ = read_dataset(self.dataset)
+            resolved, rows, _ = resolve(data['tables'], analysis['options'])
+            simulation = simulate(rows, scenario)
+        return build_export(analysis, simulation)
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -98,7 +170,8 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json(400, {'error': str(error)})
 
     def do_POST(self):
-        if urlsplit(self.path).path != '/api/analyses':
+        path = urlsplit(self.path).path
+        if path not in {'/api/analyses', '/api/simulate', '/api/exports'}:
             self.send_json(404, {'error': '路径不存在'})
             return
         try:
@@ -106,11 +179,34 @@ class Handler(BaseHTTPRequestHandler):
             if not 0 < length <= 65536:
                 raise ValueError('请求大小不合适')
             payload = json.loads(self.rfile.read(length))
-            if not isinstance(payload, dict) or set(payload) - {'title', 'options'}:
-                raise ValueError('保存请求字段无效')
-            analyzed = self.application.analyze(payload.get('options', {}))
-            value = self.application.store.save(payload.get('title'), analyzed['digest'], analyzed['options'], analyzed['result'])
-            self.send_json(201, value)
+            if path == '/api/analyses':
+                if not isinstance(payload, dict) or set(payload) - {'title', 'options'}:
+                    raise ValueError('保存请求字段无效')
+                analyzed = self.application.analyze(payload.get('options', {}))
+                value = self.application.store.save(payload.get('title'), analyzed['digest'], analyzed['options'], analyzed['result'])
+                self.send_json(201, value)
+                return
+            if path == '/api/simulate':
+                if not isinstance(payload, dict) or set(payload) - (ANALYSIS_FIELDS | {'scenario'}):
+                    raise ValueError('试算请求字段无效')
+                value = self.application.simulate(payload)
+                self.send_json(200, value)
+                return
+            material = self.application.export(payload)
+            query = parse_qs(urlsplit(self.path).query)
+            if query.get('format', [''])[-1] == 'csv':
+                rows = csv_rows(material)
+                payload = '\n'.join(','.join(_csv_cell(cell) for cell in row) for row in rows).encode('utf-8-sig')
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/csv; charset=utf-8')
+                self.send_header('Content-Disposition', 'attachment; filename="pay-review.csv"')
+                self.send_header('Content-Length', str(len(payload)))
+                self.end_headers()
+                self.wfile.write(payload)
+                return
+            self.send_json(200, material)
+        except KeyError as error:
+            self.send_json(404, {'error': str(error)})
         except (ValueError, TypeError) as error:
             self.send_json(400, {'error': str(error)})
 

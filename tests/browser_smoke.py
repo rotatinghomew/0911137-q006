@@ -38,9 +38,15 @@ def main():
                 page.goto(base)
                 page.wait_for_function("document.querySelector('#status').textContent === '分析已更新'")
                 assert page.locator('#results tbody tr').count() > 0
-                page.locator('#filters select').select_option(catalog['groups'][0])
+                assert page.locator('#disparity .pair').count() == 2
+                assert '不可比' in page.locator('#disparity .pair').nth(1).inner_text()
+                page.locator('#filters select[name="group"]').select_option(catalog['groups'][0])
                 page.get_by_role('button', name='更新分析', exact=True).click()
                 page.wait_for_function("document.querySelector('#status').textContent === '分析已更新'")
+                page.get_by_role('button', name='运行试算').click()
+                page.wait_for_function("document.querySelector('#simulation table') !== null")
+                budget = page.locator('#simulation').inner_text()
+                assert '实际成本' in budget and '未满足的约束' in budget
                 page.locator('#save input').fill('浏览器业务核对')
                 page.get_by_role('button', name='保存当前分析').click()
                 page.wait_for_selector('#history button')
@@ -48,11 +54,15 @@ def main():
                 page.wait_for_selector('#history button')
                 page.locator('#history button').click()
                 page.wait_for_function("document.querySelector('#status').textContent.includes('浏览器业务核对')")
-                assert page.locator('#filters select').input_value() == catalog['groups'][0]
+                assert page.locator('#filters select[name="group"]').input_value() == catalog['groups'][0]
+                with page.expect_download() as download:
+                    page.get_by_role('button', name='导出 CSV').click()
+                download_value = download.value
+                assert download_value.suggested_filename == 'pay-review.csv'
                 page.get_by_role('button', name='查看资料').click()
                 page.wait_for_selector('#raw tbody tr')
                 assert not errors, errors
-                print(json.dumps({'结果': '通过', '页面错误': errors, '保存范围': page.locator('#filters select').input_value()}, ensure_ascii=False))
+                print(json.dumps({'结果': '通过', '页面错误': errors, '保存范围': page.locator('#filters select[name="group"]').input_value(), '导出文件': download_value.suggested_filename}, ensure_ascii=False))
                 browser.close()
         finally:
             process.terminate()

@@ -4,10 +4,46 @@
 <body>
 <header><span>本地分析应用</span><h1>薪酬结构分析台</h1><p id="description"></p></header>
 <main>
-<form id="filters"><label>分析时点 <input name="cutoff" type="number" required></label><label>业务范围 <select name="group"></select></label><button type="submit">更新分析</button></form>
+<form id="filters">
+  <label>分析时点 <input name="cutoff" type="number" required></label>
+  <label>业务范围 <select name="group"></select></label>
+  <label>比较维度 <select name="dimension"><option value="group">合成分组</option><option value="region">地区</option></select></label>
+  <label>参照群体 <select name="baseline"></select></label>
+  <label>薪酬口径 <select name="metric">
+    <option value="fixed_fulltime">固定薪资（全职口径）</option>
+    <option value="bonus_declared">奖金（仅已申报）</option>
+    <option value="equity">股权（当期统一估值）</option>
+    <option value="total_complete">完整记录总额</option>
+  </select></label>
+  <label>任职时间带宽 <input name="tenure_width" type="number" min="1" max="50" value="10"></label>
+  <button type="submit">更新分析</button>
+</form>
 <p id="status" role="status">正在读取资料</p>
+
 <section aria-label="当前分析"><h2>当前资料摘要</h2><dl id="summary"></dl><ul id="notes"></ul><p id="digest"></p><div id="results" class="scroll"></div></section>
+
+<section aria-label="差异分析"><h2>可审查差异分析</h2><p id="disparity-meta" class="muted"></p><div id="disparity"></div></section>
+
+<section aria-label="调薪试算"><h2>调薪试算</h2>
+  <form id="simulate">
+    <label>规则 <select name="rule"><option value="uniform_percent">统一比例</option><option value="band_floor">补齐薪带下限</option></select></label>
+    <label>比例（%） <input name="percent" type="number" min="0" max="100" step="0.1" value="3"></label>
+    <label>预算 <input name="budget" type="number" min="0" step="1000" value="500000"></label>
+    <label>员工薪资下限 <input name="floor" type="number" min="0" step="1000" value="0"></label>
+    <label>目标维度 <select name="dimension"><option value="employee_group">合成分组</option><option value="region">地区</option><option value="job">岗位层级</option></select></label>
+    <label>目标对象 <select name="targets" multiple size="3"></select></label>
+    <label><input name="honor_bands" type="checkbox" checked> 遵守薪带上限</label>
+    <label><input name="fit_budget" type="checkbox"> 预算内下调比例</label>
+    <button type="submit">运行试算</button>
+  </form>
+  <p class="muted">试算只处理固定薪资，不生成个人补薪指令；未满足的约束与分项成本会逐条保留。</p>
+  <div id="simulation"></div>
+</section>
+
 <section aria-label="保存的分析"><h2>分析版本</h2><form id="save"><label>版本名称 <input name="title" required maxlength="100" value="经营讨论"></label><button type="submit">保存当前分析</button></form><ul id="history"></ul></section>
-<section aria-label="原始资料"><h2>资料查阅</h2><label>资料表 <select id="tables"></select></label><button id="source" type="button">查看资料</button><div id="raw" class="scroll"></div></section>
+
+<section aria-label="评审导出"><h2>评审材料导出</h2><p class="muted">导出只含汇总数值，不含员工级记录；少于五人的分组会被抑制，并做互补抑制防止反推。</p><button id="export-json" type="button">导出 JSON</button> <button id="export-csv" type="button">导出 CSV</button><p id="export-status" class="muted"></p></section>
+
+<section aria-label="原始资料"><h2>资料查阅</h2><label>资料表 <select id="tables"></select></label><button id="source" type="button">查看资料</button><p class="muted">员工级记录仅在本机浏览器查看，请勿把此表直接外发。</p><div id="raw" class="scroll"></div></section>
 </main><script src="/app.js" defer></script>
 </body></html>
